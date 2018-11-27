@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html style="background: #fff">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="copyright" content="©2018 Vincent V. Toscano">
+    <meta name="author" content="Vincent V. Toscano">
+    <meta name="theme-color" content="#000000">
+    <meta name="application-name" content="VVT">
+    <meta name="description" content="InfusionSoft Persistent cookie usage.">
+    <meta name="keywords" content="VVT, online dividend tool, dividend reinvestment">
+    <meta name="distribution" content="global">
+    <meta name="og:title" property="og:title" content="VVT">
+    <meta name="og:locale" property="og:title" content="en_US">
+    <meta name="og:description" property="og:description" content="InfusionSoft Persistent cookie usage.">
+    <meta name="og:site_name" property="og:site_name" content="VVT">
+    <meta name="og:type" property="og:type" content="website">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="VVT">
+    <meta name="msapplication-window" content="width=1024;height=768">
+    <meta name="msapplication-navbutton-color" content="#999999">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-TileColor" content="##ffffff">
+    <meta name="msapplication-TileImage" content="/imgs/mstile-144x144.png?v=0we89gd">
+    <meta name="msapplication-config" content="/imgs/browserconfig.xml?v=0we89gd">
+    <title>InfusionSoft Persistent Data Concept</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/apple-touch-icon.png?v=0we89gd">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png?v=0we89gd">
+    <link rel="icon" type="image/png" sizes="194x194" href="/imgs/favicon-194x194.png?v=0we89gd">
+    <link rel="icon" type="image/png" sizes="192x192" href="/imgs/android-chrome-192x192.png?v=0we89gd">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png?v=0we89gd">
+    <link rel="manifest" href="/imgs/site.webmanifest?v=0we89gd">
+    <link rel="mask-icon" href="/imgs/safari-pinned-tab.svg?v=0we89gd" color="#000000">
+    <link rel="shortcut icon" href="/imgs/favicon.ico?v=0we89gd">
+</head>
+<style>
+    ::after, ::before, a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        color: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+        background: transparent;
+        pointer-events: inherit;
+        -webkit-opacity: inherit;
+        -khtml-opacity: inherit;
+        -moz-opacity: inherit;
+        opacity: inherit;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+
+    *, *:before, *:after {
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    }
+    html, body {
+        font: normal normal normal 10pt/normal Arial, Helvetica, sans-serif;
+        color: #000;
+    }
+
+    #CHECKOUT_LINKS{
+        text-align: center;
+    }
+    .continueButton {
+        display: inline-block;
+        width: 200px;
+        height: 48px;
+        background: steelblue;
+        text-align: center;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        line-height: 48px;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+    <form method="post" name="orderForm" id="orderForm"><input id="identifier" name="identifier" type="hidden" value="devAddBillingInfo"><input id="proceedToCheckout" name="proceedToCheckout" type="hidden" value="false"><input id="purchasableProductIds" name="purchasableProductIds" type="hidden" value=""><input id="quantities" name="quantities" type="hidden" value=""><input id="removePurchasableProductId" name="removePurchasableProductId" type="hidden" value=""><input id="upSellId" name="upSellId" type="hidden" value=""><input id="submitted" name="submitted" type="hidden" value="false"><input id="optionsPurchasableProductId" name="optionsPurchasableProductId" type="hidden" value="0"><input id="productOptionId" name="productOptionId" type="hidden" value=""><input id="productOption" name="productOption" type="hidden" value=""><input id="displayTaxAsVat" name="displayTaxAsVat" type="hidden" value="false"><input id="timeZone" name="timeZone" type="hidden" value="America/Los_Angeles"><input id="wePayRiskToken" name="wePayRiskToken" type="hidden" value=""><input id="removePayPalPopups" name="removePayPalPopups" type="hidden" value="true"><div id="header">
+        <div id="CUSTOM_HTML">
+            <div id="customHeader">
+            </div></div>
+
+    </div>
+        <div id="content">
+            <input id="previewMode" name="previewMode" type="hidden" value="true"><div id="ORDER_FORM_PRODUCT_LIST">
+            <table class="viewCart tabular grid">
+
+                <tbody><tr>
+                    <th class="leftAlign">
+                        Products</th>
+                    <th></th>
+                    <th class="rightAlignPrice priceCell">Price</th>
+                    <th class="centerAlign qtyCell">Quantity</th>
+                    <th class="rightAlignPrice priceCell">Total</th>
+                </tr>
+
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <h1>Update Billing Information</h1>
+                            <p class="productDescription">• Updates User Billing Information related to VVT product
+                                • This is not to be modified as it's essential by VVT to use on receipts mailed to customers.</p>
+                        </td>
+                        <td class="rightAlignPrice priceCell">
+                            <span class="price">$0.00</span>
+                        </td>
+                        <td class="centerAlign qtyCell">
+                            <input type="number" class="qtyField" name="qty_1" value="1" size="1">
+                            <a class="updateCart" href="javascript:Infusion.Ecomm.OrderForms.ajaxSubmitForm('orderForm', false, 0, 0, 'devAddBillingInfo', 'RENDER_ORDER_FORM', ['ORDER_FORM_PRODUCT_LIST', 'ORDER_FORM_SUMMARY', 'UP_SELLS', 'PAYMENT_PLANS', 'SHIPPING_OPTIONS','CHECKOUT_LINKS'])">
+                                Update</a>
+                        </td>
+                        <td class="rightAlignPrice priceCell price">
+                            $0.00</td>
+                    </tr>
+                    <tr class="subtotal">
+                        <td class="leftAlign"><span class="totalPrice">Subtotal</span></td>
+                        <td co="" colspan="2"></td>
+                        <td class="qtyCell"></td>
+                        <td class="rightAlignPrice priceCell price"><span class="priceBold">$0.00</span></td>
+                    </tr>
+                </tbody></table></div>
+            <div id="CUSTOM_HTML">
+                <div id="productInformation">
+
+
+
+
+
+<script>
+    //  Variables
+    // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+    var ENHANCE = {
+    	NAME:'VVT',
+        PREFIX_EN:'ENHANCE > ',
+        KEY_FN: "VVT_FIRST_NAME",
+		KEY_LN: "VVT_LAST_NAME",
+		KEY_EMAIL: "VVT_EMAIL_ADDY",
+		KEY_PHONE: "VVT_PHONE_NO",
+		continue_btn:'',
+		firstName:'',
+		lastName:'',
+		emailAddy:'',
+		phoneNo:''
+    };
+
+    ENHANCE.styles001 = [
+        'background: linear-gradient(#565656, #999999)'
+        , 'border: 1px solid #3E0E02'
+        , 'color: #ff8758'
+        , 'display: block'
+        , 'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)'
+        , 'box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 5px 3px -5px rgba(0, 0, 0, 0.5), 0 -13px 5px -10px rgba(255, 255, 255, 0.4) inset'
+        , 'line-height: 40px'
+        , 'text-align: left'
+        , 'font-weight: bold'
+    ].join(';');
+
+    //  Event handling
+    // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+    var Evt = {
+        add: function (el, evt, func, bubbles) {
+            if (el.addEventListener) {
+                el.addEventListener(evt, func, bubbles || false);
+            } else {
+                el.attachEvent('on' + evt, func);
+            }
+        }
+    };
+
+    //  Supreme Cookie Handling
+    // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+    // Documentation on docCookies: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework
+    var docCookies = {
+        getItem: function (sKey) {
+            if (!sKey) { return null; }
+            return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+        },
+        setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+            if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
+            var sExpires = "";
+            if (vEnd) {
+                switch (vEnd.constructor) {
+                    case Number:
+                        sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+                        /*
+                         Note: Despite officially defined in RFC 6265, the use of `max-age` is not compatible with any
+                         version of Internet Explorer, Edge and some mobile browsers. Therefore passing a number to
+                         the end parameter might not work as expected. A possible solution might be to convert the the
+                         relative time to an absolute time. For instance, replacing the previous line with:
+                         */
+                        /*
+                         sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; expires=" + (new Date(vEnd * 1e3 + Date.now())).toUTCString();
+                         */
+                        break;
+                    case String:
+                        sExpires = "; expires=" + vEnd;
+                        break;
+                    case Date:
+                        sExpires = "; expires=" + vEnd.toUTCString();
+                        break;
+                }
+            }
+            document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+            return true;
+        },
+        removeItem: function (sKey, sPath, sDomain) {
+            if (!this.hasItem(sKey)) { return false; }
+            document.cookie = encodeURIComponent(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "");
+            return true;
+        },
+        hasItem: function (sKey) {
+            if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
+            return (new RegExp("(?:^|;\\s*)" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+        },
+        keys: function () {
+            var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+            for (var nLen = aKeys.length, nIdx = 0; nIdx < nLen; nIdx++) { aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]); }
+            return aKeys;
+        }
+    };
+    //  Application
+    // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+	ENHANCE.init = function () {
+		document.getElementsByClassName("continueButton")[0].setAttribute("id", "continue_btn");
+		ENHANCE.continue_btn    = document.getElementById("continue_btn");
+		ENHANCE.firstName       = document.getElementById('firstName');
+		ENHANCE.lastName        = document.getElementById('lastName');
+		ENHANCE.emailAddy       = document.getElementById('emailAddress');
+		ENHANCE.phoneNo         = document.getElementById('phoneNumber');
+
+
+		console.log(ENHANCE.PREFIX_EN + '%cinit', ENHANCE.styles001);
+		ENHANCE.addHandlers();
+	};
+
+
+	ENHANCE.addHandlers = function () {
+        console.log(ENHANCE.PREFIX_EN + '%caddHandlers', ENHANCE.styles001);
+        Evt.add(ENHANCE.continue_btn, 'click', ENHANCE.onContinue);
+    };
+
+    ENHANCE.onContinue = function(evt){
+        console.log(ENHANCE.PREFIX_EN + '%conContinue', ENHANCE.styles001);
+
+        var firstName   = ENHANCE.firstName.value;
+		var lastName    = ENHANCE.lastName.value;
+		var emailAddy   = ENHANCE.emailAddy.value;
+		var phoneNo     = ENHANCE.phoneNo.value;
+
+        if (firstName.length !== 0) docCookies.setItem(ENHANCE.KEY_FN, firstName, Infinity);
+		if (lastName.length !== 0)  docCookies.setItem(ENHANCE.KEY_LN, lastName, Infinity);
+		if (emailAddy.length !== 0) docCookies.setItem(ENHANCE.KEY_EMAIL, emailAddy, Infinity);
+		if (phoneNo.length !== 0)   docCookies.setItem(ENHANCE.KEY_PHONE, phoneNo, Infinity);
+    };
+
+
+
+
+    if (docCookies.hasItem(ENHANCE.KEY_FN))  {
+		console.log(ENHANCE.PREFIX_EN + '%cYum yum yum: First Name = ' + docCookies.getItem(ENHANCE.KEY_FN), ENHANCE.styles001);
+    }
+
+
+	console.log(ENHANCE.PREFIX_EN + '%cForm enhancements are coming…', ENHANCE.styles001);
+	// ENHANCE.init();
+</script>
+
+
+
+
+
+
+                </div></div>
+            <div id="UP_SELLS">
+            </div>
+            <div id="ORDER_FORM_BILLING_ENTRY">
+                <!--<link href="/css/anti_spam.jsp?b=1.70.0.72808" media="all" rel="stylesheet" type="text/css">-->
+                <!---->
+                <!--<script type="text/javascript">(function() {-->
+				<!--var styleArray = ["/css/anti_spam.jsp"];-->
+				<!--if (window.Infusion) {-->
+					<!--Infusion.stylesLoaded(styleArray);-->
+				<!--} else if (window.InfusionStyles) {-->
+					<!--window.InfusionStyles.concat(styleArray);-->
+				<!--} else {-->
+					<!--window.InfusionStyles = styleArray;-->
+				<!--}-->
+			<!--})();-->
+            <!---->
+            <!---->
+            <!--</script>-->
+
+
+                <div id="orderFormBillingEntry">
+                <table class="billingTable tabular grid">
+
+                    <tbody><tr>
+                        <th colspan="2" class="leftAlign">Billing Information</th>
+                    </tr>
+                        <tr>
+                            <td class="rightAlignTop"><label class="checkoutLabel">* First Name</label></td>
+                            <td>
+                                <input class="inline-invalid-styling checkoutTop" id="firstName" name="firstName" size="10" type="text" required="required"><input class="inf_5e1ca6f882b8c29fe541520049467e6f" id="inf_PRSS5EIXFWUomFve" name="inf_PRSS5EIXFWUomFve" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign"><label class="checkoutLabel">* Last Name</label></td>
+                            <td>
+                                <input class="inline-invalid-styling checkout" id="lastName" name="lastName" size="12" type="text" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign">
+                                <label class="checkoutLabel">
+                                    Company Name</label>
+                            </td>
+                            <td>
+                                <input class="checkout" id="company" name="company" size="25" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign"><label class="checkoutLabel">* Address - Line 1</label></td>
+                            <td><input class="inline-invalid-styling checkout" id="addressLine1" name="addressLine1" size="25" type="text" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign"><label class="checkoutLabel">Address - Line 2</label></td>
+                            <td><input class="checkout" id="addressLine2" name="addressLine2" size="25" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign"><label class="checkoutLabel">* City</label></td>
+                            <td><input class="inline-invalid-styling checkout" id="city" name="city" size="15" type="text" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign"><label class="checkoutLabel"><div id="stateRequired">* State</div></label></td>
+                            <td>
+                                <input class="checkout inline-invalid-styling" id="state" name="state" size="2" type="text" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign"><label class="checkoutLabel">* Zip Code</label></td>
+                            <td><input class="inline-invalid-styling checkoutShortest" id="zipCode" name="zipCode" size="5" type="text" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign"><label class="checkoutLabel">* Country</label></td>
+                            <td><select class="checkout" required="required" id="country" name="country" data-on="Component.Select"><option value="">Please select one</option><option>Afghanistan</option><option>Åland Islands</option><option>Albania</option><option>Algeria</option><option>American Samoa</option><option>Andorra</option><option>Angola</option><option>Anguilla</option><option>Antarctica</option><option>Antigua and Barbuda</option><option>Argentina</option><option>Armenia</option><option>Aruba</option><option>Australia</option><option>Austria</option><option>Azerbaijan</option><option value="Bahamas (the)">Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option><option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bermuda</option><option>Bhutan</option><option value="Bolivia (Plurinational State of)">Bolivia</option><option>Bonaire, Sint Eustatius and Saba</option><option>Bosnia and Herzegovina</option><option>Botswana</option><option>Bouvet Island</option><option>Brazil</option><option value="British Indian Ocean Territory (the)">British Indian Ocean Territory</option><option value="Virgin Islands (British)">British Virgin Islands</option><option value="Brunei Darussalam">Brunei</option><option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cambodia</option><option>Cameroon</option><option>Canada</option><option value="Cabo Verde">Cape Verde</option><option value="Cayman Islands (the)">Cayman Islands</option><option value="Central African Republic (the)">Central African Republic</option><option>Chad</option><option>Chile</option><option>China</option><option>Christmas Island</option><option value="Cocos (Keeling) Islands (the)">Cocos Islands</option><option>Colombia</option><option value="Comoros (the)">Comoros</option><option value="Congo (the)">Congo</option><option value="Cook Islands (the)">Cook Islands</option><option>Costa Rica</option><option>Côte d'Ivoire</option><option>Croatia</option><option>Cuba</option><option>Curaçao</option><option>Cyprus</option><option value="Czech Republic (the)">Czech Republic</option><option>Denmark</option><option>Djibouti</option><option>Dominica</option><option value="Dominican Republic (the)">Dominican Republic</option><option>Ecuador</option><option>Egypt</option><option>El Salvador</option><option>Equatorial Guinea</option><option>Eritrea</option><option>Estonia</option><option>Ethiopia</option><option value="Falkland Islands (the) [Malvinas]">Falkland Islands</option><option value="Faroe Islands (the)">Faroe Islands</option><option>Fiji</option><option>Finland</option><option>France</option><option>French Guiana</option><option>French Polynesia</option><option value="French Southern Territories (the)">French Southern Territories</option><option>Gabon</option><option value="Gambia (the)">Gambia</option><option>Georgia</option><option>Germany</option><option>Ghana</option><option>Gibraltar</option><option>Greece</option><option>Greenland</option><option>Grenada</option><option>Guadeloupe</option><option>Guam</option><option>Guatemala</option><option>Guernsey</option><option>Guinea</option><option>Guinea-Bissau</option><option>Guyana</option><option>Haiti</option><option value="Heard Island and McDonald Islands">Heard Island And McDonald Islands</option><option>Honduras</option><option>Hong Kong</option><option>Hungary</option><option>Iceland</option><option>India</option><option>Indonesia</option><option value="Iran (Islamic Republic of)">Iran</option><option>Iraq</option><option>Ireland</option><option value="Isle of Man">Isle Of Man</option><option>Israel</option><option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jersey</option><option>Jordan</option><option>Kazakhstan</option><option>Kenya</option><option>Kiribati</option><option>Kuwait</option><option>Kyrgyzstan</option><option value="Lao People's Democratic Republic (the)">Laos</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option><option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Macao</option><option value="Macedonia (the former Yugoslav Republic of)">Macedonia</option><option>Madagascar</option><option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Mali</option><option>Malta</option><option value="Marshall Islands (the)">Marshall Islands</option><option>Martinique</option><option>Mauritania</option><option>Mauritius</option><option>Mayotte</option><option>Mexico</option><option value="Micronesia (Federated States of)">Micronesia</option><option value="Moldova (the Republic of)">Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Montserrat</option><option>Morocco</option><option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nauru</option><option>Nepal</option><option value="Netherlands (the)">Netherlands</option><option>New Caledonia</option><option>New Zealand</option><option>Nicaragua</option><option value="Niger (the)">Niger</option><option>Nigeria</option><option>Niue</option><option>Norfolk Island</option><option value="Northern Mariana Islands (the)">Northern Mariana Islands</option><option value="Korea (the Democratic People's Republic of)">North Korea</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Palau</option><option value="Palestine, State of">Palestine</option><option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option><option value="Philippines (the)">Philippines</option><option>Pitcairn</option><option>Poland</option><option>Portugal</option><option>Puerto Rico</option><option>Qatar</option><option value="Réunion">Reunion</option><option>Romania</option><option value="Russian Federation (the)">Russia</option><option>Rwanda</option><option>Saint Barthélemy</option><option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena</option><option value="Saint Kitts and Nevis">Saint Kitts And Nevis</option><option>Saint Lucia</option><option value="Saint Martin (French part)">Saint Martin</option><option value="Saint Pierre and Miquelon">Saint Pierre And Miquelon</option><option value="Saint Vincent and the Grenadines">Saint Vincent And The Grenadines</option><option>Samoa</option><option>San Marino</option><option value="Sao Tome and Principe">Sao Tome And Principe</option><option>Saudi Arabia</option><option>Senegal</option><option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapore</option><option>Sint Maarten (Dutch part)</option><option>Slovakia</option><option>Slovenia</option><option>Solomon Islands</option><option>Somalia</option><option>South Africa</option><option value="South Georgia and the South Sandwich Islands">South Georgia And The South Sandwich Islands</option><option value="Korea (the Republic of)">South Korea</option><option>South Sudan</option><option>Spain</option><option>Sri Lanka</option><option value="Sudan (the)">Sudan</option><option>Suriname</option><option value="Svalbard and Jan Mayen">Svalbard And Jan Mayen</option><option>Swaziland</option><option>Sweden</option><option>Switzerland</option><option value="Syrian Arab Republic">Syria</option><option value="Taiwan (Province of China)">Taiwan</option><option>Tajikistan</option><option value="Tanzania, United Republic of">Tanzania</option><option>Thailand</option><option value="Congo (the Democratic Republic of the)">The Democratic Republic Of Congo</option><option>Timor-Leste</option><option>Togo</option><option>Tokelau</option><option>Tonga</option><option>Trinidad and Tobago</option><option>Tunisia</option><option>Turkey</option><option>Turkmenistan</option><option value="Turks and Caicos Islands (the)">Turks And Caicos Islands</option><option>Tuvalu</option><option value="Virgin Islands (U.S.)">U.S. Virgin Islands</option><option>Uganda</option><option>Ukraine</option><option value="United Arab Emirates (the)">United Arab Emirates</option><option>United Kingdom</option><option selected="selected">United States</option><option value="United States Minor Outlying Islands (the)">United States Minor Outlying Islands</option><option>Uruguay</option><option>Uzbekistan</option><option>Vanuatu</option><option value="Holy See (the)">Vatican</option><option value="Venezuela (Bolivarian Republic of)">Venezuela</option><option value="Viet Nam">Vietnam</option><option value="Wallis and Futuna">Wallis And Futuna</option><option>Western Sahara</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option></select></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign">* Phone Number</td>
+                            <td><input class="inline-invalid-styling checkout" id="phoneNumber" name="phoneNumber" size="25" type="text" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td class="rightAlign">* Email Address</td>
+                            <td><input class="inline-invalid-styling checkoutBottom" id="emailAddress" name="emailAddress" size="15" type="text" required="required"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody></table>
+            </div>
+
+                <!--<script type="text/javascript">jQuery(document).ready(function() {-->
+
+					<!--var $country = jQuery('#country');-->
+
+					<!--if ($country.val() == 'United States' || $country.val() == 'Canada') {-->
+						<!--jQuery('#stateRequired').html('* State');-->
+						<!--var stateElement = document.getElementById("state");-->
+						<!--stateElement.classList.add('inline-invalid-styling');-->
+						<!--stateElement.setAttribute('required','required');-->
+					<!--} else {-->
+						<!--var stateElement = document.getElementById("state");-->
+						<!--stateElement.classList.remove('inline-invalid-styling');-->
+						<!--stateElement.removeAttribute('required');-->
+					<!--}-->
+
+					<!--if ($country.length > 0 && "SELECT" == $country.get(0).tagName) {-->
+						<!--$country.change(function() {-->
+
+							<!--if ($country.val() == 'United States' || $country.val() == 'Canada') {-->
+								<!--jQuery('#stateRequired').html('* State');-->
+								<!--var stateElement = document.getElementById("state");-->
+								<!--stateElement.classList.add('inline-invalid-styling');-->
+								<!--stateElement.setAttribute('required','required');-->
+							<!--} else {-->
+								<!--jQuery('#stateRequired').html('State');-->
+								<!--var stateElement = document.getElementById("state");-->
+								<!--stateElement.classList.remove('inline-invalid-styling');-->
+								<!--stateElement.removeAttribute('required');-->
+							<!--}-->
+						<!--});-->
+					<!--}-->
+				<!--});-->
+
+				<!--jQuery('#addressLine1, #city, #zipCode, #country, #state').change(function() {-->
+					<!--Infusion.Ecomm.OrderForms.submitFormUponChangeOnBilling('orderForm', 'devAddBillingInfo', 'RENDER_ORDER_FORM');-->
+
+				<!--});</script>-->
+
+            </div>
+            <div id="ORDER_FORM_SHIPPING_ENTRY">
+                <div id="orderFormShippingEntry">
+                </div>
+            </div>
+            <div id="SHIPPING_OPTIONS">
+                <div id="shippingOptionsContainer">
+                </div></div>
+            <div id="PAYMENT_PLANS">
+            </div>
+            <div id="ORDER_FORM_SUMMARY">
+                <table class="orderSummary tabular grid">
+                    <tbody><tr>
+                        <th class="leftAlign">
+                            Order Summary</th>
+                        <th class="rightAlignPrice"></th>
+                    </tr>
+                        <tr>
+                            <td class="listCell">Subtotal</td>
+                            <td class="rightAlignPrice">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="subtotal">Total Due</td>
+                            <td class="rightAlignPrice subtotal">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Promo Code:<input class="promoField" id="promoCode" name="promoCode" type="text"><a href="javascript:Infusion.Ecomm.OrderForms.ajaxSubmitForm('orderForm', false, 0, 0, 'devAddBillingInfo', 'RENDER_ORDER_FORM', ['ORDER_FORM_PRODUCT_LIST', 'ORDER_FORM_SUMMARY', 'UP_SELLS', 'PAYMENT_PLANS', 'SHIPPING_OPTIONS'])" class="codeButton">Apply</a>
+                            </td>
+                        </tr>
+                    </tbody></table></div>
+            <div id="PAYMENT_SELECTION">
+                <table id="paymentSelection" class="paymentMethodTable tabular grid">
+                    <input id="shippingRequired" name="shippingRequired" type="hidden" value="false"><tbody><tr>
+                    <th colspan="5" class="leftAlign">Credit Card</th>
+                </tr>
+                    <input id="creditCardType" name="paymentType" type="hidden" value="creditcard"><tr>
+                        <td>
+                            <!--<img src="/resources/styledcart/images/paymenttypes/creditcard.png?b=1.70.0.72808" class="paymentIcon">-->
+                            <span class="smallHeader">Credit card</span>
+                        </td>
+                    </tr>
+                    <!-- creditCardForm v2 -->
+                    <input type="hidden" id="languageCode" value="en">
+                    <tr class="cellLow">
+                        <td class="pay1">
+                            <span class="paymentLabel">Credit Card Type</span>
+                            <select class="checkout" id="cardType" name="cardType" size="1" data-on="Component.Select"><option>American Express</option><option>Discover</option><option>MasterCard</option><option>Visa</option></select></td>
+                        <td class="pay2">
+                            <span class="paymentLabel">Credit Card Number</span>
+                            <input class="regula-validation checkout" data-constraints="@Required(label=&quot;Credit Card Number&quot;, groups=[creditCard])" id="cardNumber" name="cardNumber" type="text" maxlength="16" autocomplete="off">&nbsp;&nbsp;
+                        </td>
+                        <td class="pay3">
+                            <span class="paymentLabel">Expiration Date</span>
+                            <select class="checkoutShortest" id="expirationMonth" name="expirationMonth" size="1" data-on="Component.Select"><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option></select><select class="checkoutShortest" id="expirationYear" name="expirationYear" size="1" data-on="Component.Select"><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option><option>2031</option><option>2032</option></select></td>
+                        <td class="pay4">
+                            <span class="paymentLabel">Security Code<a class="tooltip" id="tooltip1" onclick="return false;">
+                                <!--<img src="/resources/styledcart/images/tooltip-icon.png?b=1.70.0.72808" style="margin-left: 5px; cursor: pointer;" alt="tooltip" border="0">-->
+                            </a></span>
+                            <input class="regula-validation checkoutShortest" data-constraints="@Required(label=&quot;Security Code&quot;, groups=[creditCard])" id="verificationCode" name="verificationCode" size="3" type="text" autocomplete="off"></td>
+                    </tr>
+                    <!--<script type="text/javascript">jQuery(window).on("load",function() {-->
+
+						<!--Infusion.Ecomm.OrderForms.initPaymentSelection();-->
+
+					<!--});</script>-->
+
+
+                </tbody></table>
+            </div>
+            <div id="CHECKOUT_LINKS">
+                <!--<script src="https://www.google.com/recaptcha/api.js?b=1.70.0.72808" type="text/javascript"></script><div class="checkoutLinks">-->
+                <a class="continueButton">Update Card</a>
+                <!--<script type="text/javascript">Infusion.ready(function() {-->
+
+					<!--Infusion.Ecomm.OrderForms.unhideOrderFormSections();-->
+
+				<!--});</script>-->
+
+
+            </div>
+            </div>
+        </div>
+        <br clear="all">
+
+        <div id="footer">
+            <div id="CUSTOM_HTML">
+                <div id="customFooter">
+                    <p>You won't be charged yet.</p>
+                    <hr style="margin-top:24px; margin-bottom:24px; border:none; height:1px; background-color:lightgray;">
+                    <div style="font-size: 10px; padding-bottom: 50px;">
+
+                        The information contained in this website is neither an offer nor a recommendation to buy or sell any security, options on equities, or cryptocurrency. Investors Alley Corp. and its affiliates may hold a position in any of the companies mentioned. Investors Alley Corp. is neither a registered investment adviser nor a broker-dealer and does not provide customized or personalized recommendations. Past performance is not necessarily indicative of future results. No trading strategy is risk free. Trading and investing involve substantial risk, and you may lose the entire amount of your principal investment or more. You should trade or invest only “risk capital” – money you can afford to lose. Trading and investing is not appropriate for everyone. We urge you to conduct your own research and due diligence and obtain professional advice from your personal financial adviser or investment broker before making any investment decision.
+
+                    </div>
+\
+
+                    <script type="text/javascript">
+
+
+						/**
+                         * Below here, I hooked into what someone else wrote to exemplify my proof of concept (using cookie data to
+                         * fill input fields in if it exists).
+                         * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         * * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         * * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         * * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         * * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         * * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         * * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         * * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         * * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+                         *
+						 */
+
+
+
+						function updateForm() {
+							var str = document.getElementById ("CHECKOUT_LINKS").innerHTML;
+							var res = str.replace ("Place Order", "Update Card");
+							document.getElementById ("CHECKOUT_LINKS").innerHTML = res;
+
+							var url = new URL (window.location.href);
+
+							var email = url.searchParams.get ("email");
+							var name = url.searchParams.get ("name");
+							var lastName = url.searchParams.get ("lastname");
+							var phoneNumber = url.searchParams.get ("phoneNumber");
+
+
+							/**
+							 * Here's where I hooked in
+							 * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+							 * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+							 * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+							 * •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+							 */
+							ENHANCE.init ();
+
+
+							/**
+                             * For each (4) of the parameters we care about…
+                             * 1 - Check if there are value
+                             * 2 - If not, see if there is a cookie bearing the corresponding KEY + name
+                             * 3 - If none of the above is true, report to the console that no value has been found
+							 */
+							if (name) {
+								document.getElementById ('firstName').value = name;
+							} else if (docCookies.hasItem (ENHANCE.KEY_FN)) {
+								document.getElementById ('firstName').value = docCookies.getItem (ENHANCE.KEY_FN);
+							} else {
+								console.log (ENHANCE.PREFIX_EN + '%cFirst Name has no value', ENHANCE.styles001);
+							}
+
+                            if(lastName){
+								document.getElementById ('lastName').value = lastName;
+						    } else if (docCookies.hasItem(ENHANCE.KEY_LN))  {
+								document.getElementById('lastName').value = docCookies.getItem(ENHANCE.KEY_LN);
+							} else {
+								console.log(ENHANCE.PREFIX_EN + '%cLast Name has no value', ENHANCE.styles001);
+							}
+
+							if(email){
+								document.getElementById ('emailAddress').value = email;
+							} else if (docCookies.hasItem(ENHANCE.KEY_EMAIL))  {
+								document.getElementById('emailAddress').value = docCookies.getItem(ENHANCE.KEY_EMAIL);
+							} else {
+								console.log(ENHANCE.PREFIX_EN + '%cEmail has no value', ENHANCE.styles001);
+							}
+
+
+							if(phoneNumber){
+								document.getElementById ('phoneNumber').value = phoneNumber;
+							} else if (docCookies.hasItem(ENHANCE.KEY_PHONE))  {
+								document.getElementById('phoneNumber').value = docCookies.getItem(ENHANCE.KEY_PHONE);
+							} else {
+								console.log(ENHANCE.PREFIX_EN + '%cPhone number has no value', ENHANCE.styles001);
+							}
+
+
+						}
+
+
+						window.onload = updateForm();
+
+                    </script>
+
+                </div></div>
+        </div>
+    </form>
+
+    <script></script>
+</body>
+
+</html>
